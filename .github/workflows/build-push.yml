@@ -19,8 +19,7 @@ jobs:
             create job
             build-deploy
             --context development
-            --from-config
-            -a radix-mini-app
+            -a radix-mini-app-with-github-action
             -b ${GITHUB_REF##*/}
             --token-environment
             -f             
