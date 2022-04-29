@@ -10,7 +10,7 @@ jobs:
     name: deploy
     runs-on: ubuntu-latest
     env:
-      APP_SERVICE_ACCOUNT_TOKEN: ${{ "{{ secrets.APP_SERVICE_ACCOUNT_TOKEN " }}}}
+      APP_SERVICE_ACCOUNT_TOKEN: ${{ secrets.APP_SERVICE_ACCOUNT_TOKEN }}
     steps:
       - name: Deploy API on Radix
         uses: equinor/radix-github-actions@master
