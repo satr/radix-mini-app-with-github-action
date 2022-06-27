@@ -9,7 +9,7 @@ spec:
         from: main
   components:
     - name: server
-      image: nginxinc/nginx-unprivileged
+      image: nginxinc/nginx-unprivileged:1.22-alpine
       ports:
         - name: http
           port: 8080
