@@ -4,7 +4,6 @@ on:
   push:
     branches:
       - main
-      - release
 permissions:
   id-token: write
   # contents: read # set required permissions (https://docs.github.com/en/actions/using-jobs/assigning-permissions-to-jobs)
@@ -33,6 +32,6 @@ jobs:
             deploy
             --context development
             -a radix-mini-app-with-github-action
-            -b ${GITHUB_REF##*/}
+            -e dev
             --token-environment
             -f             
