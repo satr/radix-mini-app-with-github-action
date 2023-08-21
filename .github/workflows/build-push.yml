@@ -25,7 +25,7 @@ jobs:
           echo "::add-mask::$token"
           echo "APP_SERVICE_ACCOUNT_TOKEN=$token" >> $GITHUB_ENV
       - name: Deploy API on Radix
-        uses: equinor/radix-github-actions@v1
+        uses: equinor/radix-github-actions@v1.8.0
         with:
           args: >
             create job
