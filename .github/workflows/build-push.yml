@@ -33,5 +33,4 @@ jobs:
             --context development
             -a radix-mini-app-with-github-action
             -e dev
-            --token-environment
             -f             
