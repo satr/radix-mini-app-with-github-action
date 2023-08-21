@@ -6,7 +6,7 @@ on:
       - main
 permissions:
   id-token: write
-  # contents: read # set required permissions (https://docs.github.com/en/actions/using-jobs/assigning-permissions-to-jobs)    
+  # contents: read # set required permissions (https://docs.github.com/en/actions/using-jobs/assigning-permissions-to-jobs)
 
 jobs:
   build:
