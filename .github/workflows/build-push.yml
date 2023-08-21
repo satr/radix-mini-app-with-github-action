@@ -28,8 +28,7 @@ jobs:
         uses: equinor/radix-github-actions@v1.8.0
         with:
           args: >
-            create 
-            job
+            create job
             deploy
             --context development
             -a radix-mini-app-with-github-action
