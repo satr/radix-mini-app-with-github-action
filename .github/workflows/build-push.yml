@@ -31,6 +31,6 @@ jobs:
             create job
             deploy
             --context development
-            -a radix-mini-app-with-github-action123
+            -a radix-mini-app-with-github-action
             -e dev
             -f             
