@@ -34,7 +34,7 @@ jobs:
             create job
             deploy
             --context development
-            -a radix-mini-app-with-github-action
+            -a $GITHUB_SHA
             -e dev
             --commitID 9682b45fdbadcf80419e8f4a470070d91400e975
             -f             
