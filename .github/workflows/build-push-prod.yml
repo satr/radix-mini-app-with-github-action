@@ -33,5 +33,5 @@ jobs:
             --context production
             -a radix-mini-app-with-github-action
             -e dev
-            --commitID 9682b45fdbadcf80419e8f4a470070d91400e975
+            --commitID $GITHUB_SHA
             -f             
