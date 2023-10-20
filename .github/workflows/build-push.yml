@@ -28,7 +28,7 @@ jobs:
       - name: Show commit ID
         run: echo "Commit ID is $GITHUB_SHA"
       - name: Deploy API on Radix
-        uses: equinor/radix-github-actions@v1
+        uses: equinor/radix-github-actions@update-rx-version-1-11-0
         with:
           args: >
             restart pipeline-job
