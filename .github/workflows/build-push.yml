@@ -31,10 +31,22 @@ jobs:
         uses: equinor/radix-github-actions@v1
         with:
           args: >
-            create job
-            deploy
+            restart pipeline-job
             --context development
             -a radix-mini-app-with-github-action
+            -j radix-pipeline-20231020075441-cq5xo
             -e dev
             --commitID $GITHUB_SHA
             -f             
+      # - name: Deploy API on Radix
+      #   uses: equinor/radix-github-actions@v1
+      #   with:
+      #     args: >
+      #       create job
+      #       deploy
+      #       --context development
+      #       -a radix-mini-app-with-github-action
+      #       -e dev
+      #       --commitID $GITHUB_SHA
+      #       -f             
+    
