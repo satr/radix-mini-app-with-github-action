@@ -35,7 +35,6 @@ jobs:
             --context development
             -a radix-mini-app-with-github-action
             -j radix-pipeline-20231020075441-cq5xo
-            --commitID $GITHUB_SHA
       # - name: Deploy API on Radix
       #   uses: equinor/radix-github-actions@v1
       #   with:
