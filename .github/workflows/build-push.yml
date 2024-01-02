@@ -34,8 +34,8 @@ jobs:
             create job
             deploy
             --context development
-            -a radix-mini-app-with-github-action
-            -e dev
+            --application radix-mini-app-with-github-action
+            --environment dev
             --commitID $GITHUB_SHA
             -f             
       - name: Set variable
@@ -43,8 +43,8 @@ jobs:
         with:
           args: >
             set environment-variable 
-            -a radix-mini-app-with-github-action
-            -e dev 
+            --application radix-mini-app-with-github-action
+            --environment dev 
             --component server
             --variable LOG_LEVEL 
             --value DEBUG
