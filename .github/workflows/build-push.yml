@@ -39,7 +39,7 @@ jobs:
             --commitID $GITHUB_SHA
             -f             
       - name: Set variable
-        uses: equinor/radix-github-actions@update-rx-version-1-13-2
+        uses: equinor/radix-github-actions@v1
         with:
           args: >
             set environment-variable 
