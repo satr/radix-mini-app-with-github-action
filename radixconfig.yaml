@@ -13,6 +13,19 @@ spec:
       ports:
         - name: http
           port: 8080
-      publicPort: http
       variables:
-        LOG_LEVEL: ERROR
+        LOG_LEVEL: INFO
+    - name: server2
+      image: nginxinc/nginx-unprivileged:1.22-alpine
+      ports:
+        - name: http
+          port: 8080
+      variables:
+        LOG_LEVEL: INFO
+    - name: server3
+      image: nginxinc/nginx-unprivileged:1.22-alpine
+      ports:
+        - name: http
+          port: 8080
+      variables:
+        LOG_LEVEL: INFO
