@@ -9,23 +9,23 @@ spec:
         from: main
   components:
     - name: server
-      image: nginxinc/nginx-unprivileged:alpine3.18-perl
+      image: nginxinc/nginx-unprivileged:1.22-alpine
       ports:
         - name: http
           port: 8080
       variables:
-        LOG_LEVEL: DEBUG
+        LOG_LEVEL: INFO
     - name: server2
-      image: nginxinc/nginx-unprivileged:alpine3.18-perl
+      image: nginxinc/nginx-unprivileged:1.22-alpine
       ports:
         - name: http
           port: 8080
       variables:
-        LOG_LEVEL: DEBUG
+        LOG_LEVEL: INFO
     - name: server3
-      image: nginxinc/nginx-unprivileged:alpine3.18-perl
+      image: nginxinc/nginx-unprivileged:1.22-alpine
       ports:
         - name: http
           port: 8080
       variables:
-        LOG_LEVEL: DEBUG
+        LOG_LEVEL: INFO
