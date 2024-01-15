@@ -14,18 +14,18 @@ spec:
         - name: http
           port: 8080
       variables:
-        LOG_LEVEL: INFO
+        LOG_LEVEL: INFO1
     - name: server2
       image: nginxinc/nginx-unprivileged:1.22-alpine
       ports:
         - name: http
           port: 8080
       variables:
-        LOG_LEVEL: INFO
+        LOG_LEVEL: INFO2
     - name: server3
       image: nginxinc/nginx-unprivileged:1.22-alpine
       ports:
         - name: http
           port: 8080
       variables:
-        LOG_LEVEL: INFO
+        LOG_LEVEL: INFO3
