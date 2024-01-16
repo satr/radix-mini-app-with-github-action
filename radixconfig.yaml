@@ -9,26 +9,26 @@ spec:
         from: main
   components:
     - name: server
-      image: nginxinc/nginx-unprivileged:mainline-alpine3.18-perl
+      image: nginxinc/nginx-unprivileged:mainline-alpine-perl
       ports:
         - name: http
           port: 8080
       variables:
-        LOG_LEVEL: INFO5
+        LOG_LEVEL: INFO15
         TEST: abc
     - name: server2
-      image: nginxinc/nginx-unprivileged:mainline-alpine3.18-perl
+      image: nginxinc/nginx-unprivileged:mainline-alpine-perl
       ports:
         - name: http
           port: 8080
       variables:
-        LOG_LEVEL: INFO6
+        LOG_LEVEL: INFO16
         TEST: abc
     - name: server3
-      image: nginxinc/nginx-unprivileged:mainline-alpine3.18-perl
+      image: nginxinc/nginx-unprivileged:mainline-alpine-perl
       ports:
         - name: http
           port: 8080
       variables:
-        LOG_LEVEL: INFO7
+        LOG_LEVEL: INFO17
         TEST: abc
