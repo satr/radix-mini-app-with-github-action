@@ -9,7 +9,7 @@ spec:
         from: main
   components:
     - name: server
-      image: nginxinc/nginx-unprivileged:alpine3.18
+      image: nginxinc/nginx-unprivileged:stable-alpine3.17-perl
       ports:
         - name: http
           port: 8080
@@ -17,7 +17,7 @@ spec:
         LOG_LEVEL: INFO75
         TEST: abc
     - name: server2
-      image: nginxinc/nginx-unprivileged:alpine3.18
+      image: nginxinc/nginx-unprivileged:stable-alpine3.17-perl
       ports:
         - name: http
           port: 8080
@@ -25,7 +25,7 @@ spec:
         LOG_LEVEL: INFO76
         TEST: abc
     - name: server3
-      image: nginxinc/nginx-unprivileged:alpine3.18
+      image: nginxinc/nginx-unprivileged:stable-alpine3.17-perl
       ports:
         - name: http
           port: 8080
