@@ -31,7 +31,7 @@ jobs:
         uses: equinor/radix-github-actions@update-rx-version-1-15-0
         with:
           args: >
-            create job
+            create pipeline-job
             deploy
             --context development
             --application radix-mini-app-with-github-action
@@ -40,6 +40,7 @@ jobs:
             --component server2
             --component server3
             -f             
+            --verbose
       - name: Set variable
         uses: equinor/radix-github-actions@v1
         with:
