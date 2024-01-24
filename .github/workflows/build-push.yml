@@ -28,7 +28,7 @@ jobs:
       - name: Show commit ID
         run: echo "Commit ID is $GITHUB_SHA"
       - name: Deploy API on Radix
-        uses: equinor/radix-github-actions@v1.15.0
+        uses: equinor/radix-github-actions@v1
         with:
           args: >
             create pipeline-job
@@ -37,10 +37,9 @@ jobs:
             --application radix-mini-app-with-github-action
             --environment dev
             --commitID $GITHUB_SHA
+            --component server
             --component server2
-            --component server3
-            -f             
-            --verbose
+            -f
       - name: Set variable
         uses: equinor/radix-github-actions@v1
         with:
