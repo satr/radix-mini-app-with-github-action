@@ -3,7 +3,7 @@ name: CI
 on:
   push:
     branches:
-      - main2
+      - main
 permissions:
   id-token: write
   # contents: read # set required permissions (https://docs.github.com/en/actions/using-jobs/assigning-permissions-to-jobs)
@@ -28,7 +28,7 @@ jobs:
       - name: Show commit ID
         run: echo "Commit ID is $GITHUB_SHA"
       - name: Deploy API on Radix
-        uses: equinor/radix-github-actions@v1
+        uses: equinor/radix-github-actions@update-rx-version-1-15-0
         with:
           args: >
             create job
@@ -37,6 +37,8 @@ jobs:
             --application radix-mini-app-with-github-action
             --environment dev
             --commitID $GITHUB_SHA
+            --component server2
+            --component server3
             -f             
       - name: Set variable
         uses: equinor/radix-github-actions@v1
