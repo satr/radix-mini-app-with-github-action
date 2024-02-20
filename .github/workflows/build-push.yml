@@ -36,7 +36,7 @@ jobs:
             --context development
             --application radix-mini-app-with-github-action
             --environment dev
-            --component ${{ ('some-component-name' == 'global') && 'global' || format('{0}{1}', 'web-', 'some-component-name') }}
+            --component ${{ ('global' == 'global') && 'global' || format('{0}{1}', 'web-', 'some-component-name') }}
             -f
             
       # - name: Deploy API on Radix
