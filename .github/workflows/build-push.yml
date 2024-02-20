@@ -27,28 +27,40 @@ jobs:
 
       - name: Show commit ID
         run: echo "Commit ID is $GITHUB_SHA"
-      # - name: Deploy API on Radix
-      #   uses: equinor/radix-github-actions@v1
-      #   with:
-      #     args: >
-      #       create pipeline-job
-      #       deploy
-      #       --context development
-      #       --application radix-mini-app-with-github-action
-      #       --environment dev
-      #       --commitID $GITHUB_SHA
-      #       --component server
-      #       --component server2
-      #       -f
-      - name: Set variable
+      - name: Deploy API on Radix
         uses: equinor/radix-github-actions@v1
         with:
           args: >
-            set environment-variable 
+            create pipeline-job
+            deploy
+            --context development
             --application radix-mini-app-with-github-action
-            --environment dev 
-            --component server
-            --variable LOG_LEVEL 
-            --value ${{ (1 == 1) && 'DEBUG' || 'INFO'}}
-            -c development
+            --environment dev
+            --component ${{ ("some-component-name" == "global") && "global" || format('{0}{1}', 'web-', "some-component-name") }}
+            -f
+            
+      # - name: Deploy API on Radix
+      # uses: equinor/radix-github-actions@v1
+      # with:
+      #   args: >
+      #     create pipeline-job
+      #     deploy
+      #     --context development
+      #     --application radix-mini-app-with-github-action
+      #     --environment dev
+      #     --commitID $GITHUB_SHA
+      #     --component server
+      #     --component server2
+      #     -f
+      # - name: Set variable
+      #   uses: equinor/radix-github-actions@v1
+      #   with:
+      #     args: >
+      #       set environment-variable 
+      #       --application radix-mini-app-with-github-action
+      #       --environment dev 
+      #       --component server
+      #       --variable LOG_LEVEL 
+      #       --value ${{ (1 == 1) && 'DEBUG' || 'INFO'}}
+      #       -c development
     
