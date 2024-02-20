@@ -49,6 +49,6 @@ jobs:
             --environment dev 
             --component server
             --variable LOG_LEVEL 
-            --value ${{ (1 == 2) && 'DEBUG' || 'INFO'}}
+            --value ${{ (1 == 1) && 'DEBUG' || 'INFO'}}
             -c development
     
