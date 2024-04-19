@@ -40,7 +40,7 @@ jobs:
       #       -f
             
       - name: Apply-config Radix app
-        uses: equinor/radix-github-actions@update-rx-version-1-17-0
+        uses: equinor/radix-github-actions@v1
         with:
           args: >
             create pipeline-job
