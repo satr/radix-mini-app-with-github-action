@@ -27,17 +27,17 @@ jobs:
 
       - name: Show commit ID
         run: echo "Commit ID is $GITHUB_SHA"
-      - name: Deploy API on Radix
-        uses: equinor/radix-github-actions@v1
-        with:
-          args: >
-            create pipeline-job
-            deploy
-            --context development
-            --application radix-mini-app-with-github-action
-            --environment dev
-            --component ${{ ('global' == 'global') && 'global' || format('{0}{1}', 'web-', 'some-component-name') }}
-            -f
+      # - name: Deploy API on Radix
+      #   uses: equinor/radix-github-actions@v1
+      #   with:
+      #     args: >
+      #       create pipeline-job
+      #       deploy
+      #       --context development
+      #       --application radix-mini-app-with-github-action
+      #       --environment dev
+      #       --component ${{ ('global' == 'global') && 'global' || format('{0}{1}', 'web-', 'some-component-name') }}
+      #       -f
             
       - name: Apply-config Radix app
         uses: equinor/radix-github-actions@update-rx-version-1-17-0
