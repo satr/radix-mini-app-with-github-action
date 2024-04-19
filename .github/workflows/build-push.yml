@@ -39,19 +39,15 @@ jobs:
             --component ${{ ('global' == 'global') && 'global' || format('{0}{1}', 'web-', 'some-component-name') }}
             -f
             
-      # - name: Deploy API on Radix
-      # uses: equinor/radix-github-actions@v1
-      # with:
-      #   args: >
-      #     create pipeline-job
-      #     deploy
-      #     --context development
-      #     --application radix-mini-app-with-github-action
-      #     --environment dev
-      #     --commitID $GITHUB_SHA
-      #     --component server
-      #     --component server2
-      #     -f
+      - name: Apply-config Radix app
+        uses: equinor/radix-github-actions@update-rx-version-1-17-0
+        with:
+          args: >
+            create pipeline-job
+            apply-config
+            --context development
+            --application radix-mini-app-with-github-action
+            -f
       # - name: Set variable
       #   uses: equinor/radix-github-actions@v1
       #   with:
